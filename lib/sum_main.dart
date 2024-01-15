@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:future_func_ts/functions/sum.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -16,19 +17,6 @@ class MyWidget extends StatefulWidget {
 class _MyWidgetState extends State<MyWidget> {
   TextEditingController textEditingController1 = TextEditingController();
   TextEditingController textEditingController2 = TextEditingController();
-
-  String zahlenEingabe = "Gebe zwei Zahlen ein";
-  String ergebnisText = "Ergebnis: Summe";
-
-  int numberOne = 0;
-  int numberTwo = 0;
-  int result = 0;
-
-  Future<int> sumNumbers(numberOne, numberTwo) async {
-    await Future.delayed(const Duration(seconds: 2));
-    result = numberOne + numberTwo;
-    return result;
-  }
 
   @override
   Widget build(BuildContext context) {
